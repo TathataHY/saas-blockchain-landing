@@ -1,0 +1,64 @@
+---
+import { CutCornerButton } from "@/components/CutCornerButton";
+import Input from "@/components/Input.astro";
+import InteriorContent from "@/components/InteriorContent.astro";
+import InteriorHero from "@/components/InteriorHero.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Contact - Frontend Tribe">
+  <InteriorHero>
+    <p
+      class="text-zinc-500 uppercase font-extrabold text-center tracking-wider"
+    >
+      Let's talk
+    </p>
+    <h1
+      class="text-5xl md:text-6xl lg:text-7xl font-heading font-black text-center mt-4"
+    >
+      Contact Us
+    </h1>
+    <p
+      class="text-zinc-400 mt-6 text-center text-xl md:text-2xl max-w-xl mx-auto"
+    >
+      We are here to help and answer any questions you may have. Reach out to us
+      learn more about our services, get support, or to apply for careers.
+    </p>
+  </InteriorHero>
+  <InteriorContent>
+    <div class="max-w-xl mx-auto">
+      <h2 class="font-heading font-black text-3xl">
+        What can we help you with?
+      </h2>
+      <form class="flex flex-col mt-8">
+        <label for="name">Name</label>
+        <Input class="mt-1">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="bg-transparent h-12 w-full outline-none px-4"
+          />
+        </Input>
+        <label for="email" class="mt-4">Email</label>
+        <Input class="mt-1">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="bg-transparent h-12 w-full outline-none px-4"
+          />
+        </Input>
+        <label for="message" class="mt-4">Message</label>
+        <Input class="mt-1">
+          <textarea
+            name="message"
+            id="message"
+            class="bg-transparent w-full outline-none px-4 py-3 min-h-32"
+          ></textarea>
+        </Input>
+        <CutCornerButton className="mt-8">Send Message</CutCornerButton>
+      </form>
+    </div>
+  </InteriorContent>
+</Layout>
